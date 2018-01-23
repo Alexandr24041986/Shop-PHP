@@ -1,30 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>pilenga shop</title>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
-<body>
-
-    <div class="Logo" align="center" >
-        <img src="png/bn_PILENGA.png">
-    </div>
-  
-      <div class="menu">
-
-         <ul>
-          <li><a href="index2.php">Главная</a></li>
-          <li><a href="catalog2.php">Каталог</a></li>
-          <li><a href="contacts2.php">Контакты</a></li>
-          <li><a href="personal2.php">Личный кабинет</a></li>
-
-         </ul>
-      </div>
-
-      
-        
-
+<?php include "header.php"; ?>
+     
           <div class="col-12">
             <p >
                 <h2 align="center">Мы работаем для Вас в пн-пт с 10.00 до 18.00
@@ -68,11 +43,8 @@
                       <a  href="https://mail.ru">defrostator@mail.ru</a>
                     </h1> 
                   </div> 
-                  <div class="footer col-12-sm col-12-md"> 
-                    <p>
-                      @@@PILENGA SHOP@@@
-                    </p> 
-                  </div>
+      </div>
+                  <?php include "footer.php";?>
                 
   </body>
 </html>     
