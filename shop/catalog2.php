@@ -54,6 +54,4 @@
                   </div>
                 </div>
     </div>
-                <?php include "footer.php";?>
-  </body>
-</html>     
+<? include "down_page.php";?>

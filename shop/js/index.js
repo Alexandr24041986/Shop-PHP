@@ -1,19 +1,17 @@
-jQuery(document).ready(function () {
+jQuery(document).ready(function() {
     'use strict';
 
-    jQuery('form#reg_form').submit(
-        function (event) {
-            event.preventDefault(); // отменяет отправку формы
-
-            // получаем значения из input'ов
+    jQuery('form#registr').submit(
+        function(event) {
+            event.preventDefault();
             let name = jQuery('#name').val();
             let login = jQuery('#login').val();
             let email = jQuery('#email').val();
-            let pwd = jQuery('#password').val();
+            let pwd = jQuery('#pwd').val();
+            // if (!name || !login || !pwd || email) {
+            //     return;
+            // }
 
-            //TODO: сделать проверку введенных данных
-
-            // формируем ассоциативный массив
             let user_data = {
                 name: name,
                 login: login,
@@ -22,24 +20,33 @@ jQuery(document).ready(function () {
                 state: 'user'
             };
 
-            // формируем строку json с данными для отправки на сервер
+
             user_data = 'user_data=' + JSON.stringify(user_data);
 
-            // ajax запрос
+
             jQuery.ajax({
-                url: '../models/reg_user_model.php', // обработчик данных на сервере
+                url: '../shop/models/reg_user_model.php', // обработчик данных на сервере
                 type: 'post', // метод, которым отправляем данные
                 data: user_data, // отправляемые данные (строка json)
-                success: function (response) {  // функция, которая будет обрабатывать ответ сервера
-                    console.log("response", response);
-                    if (response === 'user add') {
-                        window.location = "/";
-                    } else {
-                        console.log("Пользователь не добавлен");
+                success: function(response) {
+                    console.log("memo", response);
+                    switch (response) {
+                        case 'pwd is wrong':
+                            document.getElementById('response').innerHTML = 'pwd is wrong';
+                            break;
+                        case 'user not found':
+                            document.getElementById('response').innerHTML = 'user not found';
+                            break;
+                        case 'user':
+                            window.location = "/user.php";
+                            break;
+                        case 'admin':
+                            window.location = "/admin.php";
+                            break;
                     }
                 },
                 // функция, которая отработае, если не получится соедениться с сервером
-                error: function (err) {
+                error: function(err) {
                     console.log("Error", err);
                 }
             });
@@ -47,4 +54,3 @@ jQuery(document).ready(function () {
     )
 
 });
-

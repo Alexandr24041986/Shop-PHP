@@ -44,7 +44,5 @@
                     </h1> 
                   </div> 
       </div>
-                  <?php include "footer.php";?>
+<? include "down_page.php";?>
                 
-  </body>
-</html>     

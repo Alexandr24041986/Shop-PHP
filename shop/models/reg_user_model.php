@@ -1,13 +1,12 @@
 <?php
-include "reader_model.php";
+include "file_reader_model.php";
 include "validator_model.php";
 
-'user_data=' + JSON.stringify(user_data);
 
-function reg_user()
-{
+
+function reg_user(){
 	$post = $_POST;
-	$user_data = check_data(json_decode($post['user_data']));
+	$user_data = check_array_data(json_decode ($post['user_data']));
 	if(!$user_data or (addDataToFile($user_data, '../files/users_lst.txt') === false)) {
 		echo 'not add';
 		return;
@@ -15,6 +14,9 @@ function reg_user()
 		echo 'user added';
 		return;
 	}
+    echo 'user add';
+    return;
 }
+	
 reg_user();
  ?>
