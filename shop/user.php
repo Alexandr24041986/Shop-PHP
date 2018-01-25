@@ -20,3 +20,4 @@
                 </fieldset>
             </div>
         </form>
+<? include "down_page.php";?>
