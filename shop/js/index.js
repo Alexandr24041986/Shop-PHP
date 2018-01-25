@@ -32,10 +32,10 @@ jQuery(document).ready(function() {
                     console.log("memo", response);
                     switch (response) {
                         case 'pwd is wrong':
-                            document.getElementById('response').innerHTML = 'pwd is wrong';
+                            document.getElementById('memo').innerHTML = 'pwd is wrong';
                             break;
                         case 'user not found':
-                            document.getElementById('response').innerHTML = 'user not found';
+                            document.getElementById('memo').innerHTML = 'user not found';
                             break;
                         case 'user':
                             window.location = "/user.php";
