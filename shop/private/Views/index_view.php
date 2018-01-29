@@ -1,10 +1,10 @@
-<?php include "header.php";?>
-              
+
+             
                 <div class="container">
                   <div class="row">
                       <div class="col-4 col-12-sm col-12-md ">
                           <div class="clutchkit">
-                              <img src="png/clutchkit.png" >
+                              <img src="static/images/png/clutchkit.png" >
                                 <p>
                                   Мы рады предоставить в нашем магазине новинки
                                   сцепления на автомобили российских и импортных
@@ -15,7 +15,7 @@
                       
                   <div class="col-4 col-12-sm col-12-md ">
                     <div class="drums">
-                        <img  src="png/drams.png">
+                        <img  src="static/images/png/drams.png">
                         <p>
                           Товары PILENGA
                           Совершенство итальянских технологий, воплощенное в широкой линейке запасных частей для автомобилей - это и есть Товары PILENGA. Каждое техническое решение выверено, каждая партия проходит испытания, каждый товар имеет срок гарантийного использования.
@@ -27,7 +27,7 @@
                   </div>
                       <div class="col-4 col-12-sm col-12-md ">
                         <div class="disk">
-                            <img  src="png/disc.png"> 
+                            <img  src="static/images/png/disc.png"> 
                       
                             <p>
                             В 2003 году появились и завоевали заслуженную популярность тор­мозные тюнинговые диски серии «Sport» для всех переднеприводных ВАЗов. Это те же самые серийные диски, в которых выполнена фрезеровка для са­моочистки поверхности колодок и перфорация для газоотвода при торможении. 

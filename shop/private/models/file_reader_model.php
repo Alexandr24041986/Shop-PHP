@@ -11,7 +11,9 @@ function getDataFromFile($filename){
     return false;
 }
 
-
+function getDataFromFileShort($filename) {
+    return file_get_contents($filename);
+}
 
 function addDataToFile($data, $filename) {
     $from_file = file_get_contents($filename);
@@ -21,7 +23,7 @@ function addDataToFile($data, $filename) {
 }
 
 function getAllUsers() {
-    $users = getDataFromFileShort("../files/users_lst.txt");
+    $users = getDataFromFileShort("../private/files/users_lst.txt");
     return unserialize($users);
 }
 

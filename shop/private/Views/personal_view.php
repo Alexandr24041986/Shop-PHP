@@ -1,4 +1,4 @@
-<?php include "header.php";?>
+
 <div class="reg">
 	<div class="col-4 offset-4">
 		<form id ="auth_form" method="post">
@@ -29,7 +29,7 @@
                                 </table>
                                 <br>
                             <div class="registration">
-                                <p><a target="top" href="registration2.php"> Зарегистрироваться</a></p>
+                                <p><a target="top" href="registration"> Зарегистрироваться</a></p>
                             </div>
                             <br>
                             <div class="submit">

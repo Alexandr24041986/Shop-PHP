@@ -1,0 +1,1 @@
+a:2:{i:0;O:8:"stdClass":5:{s:4:"name";s:10:"Санек";s:5:"login";s:8:"brezhnev";s:5:"email";s:18:"brezhne555@mail.ru";s:3:"pwd";s:8:"12345678";s:5:"state";s:4:"user";}i:1;O:8:"stdClass":5:{s:4:"name";s:10:"Санек";s:5:"login";s:8:"brezhnev";s:5:"email";s:18:"brezhne555@mail.ru";s:3:"pwd";s:8:"12345678";s:5:"state";s:4:"user";}}

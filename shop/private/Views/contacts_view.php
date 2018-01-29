@@ -1,5 +1,5 @@
-<?php include "header.php"; ?>
-     
+
+    
           <div class="col-12">
             <p >
                 <h2 align="center">Мы работаем для Вас в пн-пт с 10.00 до 18.00

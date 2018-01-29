@@ -1,4 +1,4 @@
-<? include "header.php";?>
+
             </div>
             <div>Приветствую тебя о, Всемогущий)))</div>
         </div>

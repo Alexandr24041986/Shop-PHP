@@ -8,9 +8,9 @@ jQuery(document).ready(function() {
             let login = jQuery('#login').val();
             let email = jQuery('#email').val();
             let pwd = jQuery('#pwd').val();
-            // if (!name || !login || !pwd || email) {
-            //     return;
-            // }
+            if (!name || !login || !pwd || email) {
+                return;
+            }
 
             let user_data = {
                 name: name,
@@ -25,7 +25,7 @@ jQuery(document).ready(function() {
 
 
             jQuery.ajax({
-                url: '../shop/models/reg_user_model.php', // обработчик данных на сервере
+                url: 'reg_user', // обработчик данных на сервере
                 type: 'post', // метод, которым отправляем данные
                 data: user_data, // отправляемые данные (строка json)
                 success: function(response) {
