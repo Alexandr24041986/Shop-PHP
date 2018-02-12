@@ -22,7 +22,7 @@ class RegistrationModel
             return self::ERROR;
         }
         $sql = "INSERT INTO $this->table_name ( name,login, email, pwd) 
-VALUES ( :name,:login, :email, :pwd)";
+        VALUES ( :name,:login, :email, :pwd)";
         $params = [
 
             'name'=> $data['name'],
