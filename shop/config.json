@@ -1,0 +1,31 @@
+{
+    "db": {
+        "servername": "localhost",
+        "db_name": "Shop",
+        "username": "root",
+        "password": ""
+    },
+    "urls": {
+        "index": {
+            "path": "/",
+            "controller": "\\Alex\\Shop\\Controllers\\IndexController::indexAction"
+        },
+
+        "personal": {
+            "path": "/personal",
+            "controller": "\\Alex\\Shop\\Controllers\\PersonalController::personalAction"
+        },
+        "registration": {
+            "path": "/registration",
+            "controller": "\\Alex\\Shop\\Controllers\\RegistrationController::registrationAction"
+        },
+        "catalog": {
+            "path": "/catalog",
+            "controller": "\\Alex\\Shop\\Controllers\\CatalogController::catalogAction"
+        },
+        "contacts": {
+            "path": "/contacts",
+            "controller": "\\Alex\\Shop\\Controllers\\ContactController::contactAction"
+        }
+    }
+}

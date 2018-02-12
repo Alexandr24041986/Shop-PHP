@@ -1,0 +1,23 @@
+{
+    "name": "alex/shop",
+    "description": "shop",
+    "type": "project",
+    "license": "MIT",
+    "authors": [{
+        "name": "Alex Shevel",
+        "email": "brezhnev555@mail.ru"
+    }],
+    "minimum-stability": "alpha",
+    "repositories": [{
+        "type": "git",
+        "url": "https://github.com/web-development-courses/engine"
+    }],
+    "autoload": {
+        "psr-4": {
+            "Alex\\Shop\\": "private/"
+        }
+    },
+    "require": {
+        "web/engine": "dev-master"
+    }
+}

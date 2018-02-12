@@ -20,7 +20,7 @@ jQuery(document).ready(function() {
             auth_data = 'auth_data=' + JSON.stringify(auth_data);
 
             jQuery.ajax({
-                url: '../shop/models/auth_user.php',
+                url: '/personal',
                 type: 'post',
                 data: auth_data,
                 success: function(response) {

@@ -2,7 +2,7 @@
 
 			<div class="reg">
 				<div class="col-4 offset-4">
-					<form id ="registr" method="post">
+					<form id ="registr" method="post" action="">
 						<div class="table">
 											<fieldset>
 												<legend><strong>Регистрация</strong></legend>

@@ -1,13 +1,16 @@
 jQuery(document).ready(function() {
     'use strict';
 
+
     jQuery('form#registr').submit(
         function(event) {
+
             event.preventDefault();
             let name = jQuery('#name').val();
             let login = jQuery('#login').val();
             let email = jQuery('#email').val();
             let pwd = jQuery('#pwd').val();
+            console.log('данные ушли');
             if (!name || !login || !pwd || email) {
                 return;
             }
@@ -25,7 +28,7 @@ jQuery(document).ready(function() {
 
 
             jQuery.ajax({
-                url: 'reg_user', // обработчик данных на сервере
+                url: '/registration', // обработчик данных на сервере
                 type: 'post', // метод, которым отправляем данные
                 data: user_data, // отправляемые данные (строка json)
                 success: function(response) {
