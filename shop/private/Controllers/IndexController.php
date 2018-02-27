@@ -1,7 +1,5 @@
 <?php
 namespace Alex\Shop\Controllers;
-
-//use Web\Concert\Models\ShowsModel;
 use Web\Engine\Controller;
 
 class IndexController extends Controller

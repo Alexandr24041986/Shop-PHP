@@ -10,7 +10,6 @@
             "path": "/",
             "controller": "\\Alex\\Shop\\Controllers\\IndexController::indexAction"
         },
-
         "personal": {
             "path": "/personal",
             "controller": "\\Alex\\Shop\\Controllers\\PersonalController::personalAction"
@@ -26,6 +25,14 @@
         "contacts": {
             "path": "/contacts",
             "controller": "\\Alex\\Shop\\Controllers\\ContactController::contactAction"
+        },
+        "user_account":{
+            "path": "/user_account",
+            "controller": "\\Alex\\Shop\\Controllers\\UserController::userAction"
+        },
+        "admin_account":{
+            "path": "/admin_account",
+            "controller": "\\Alex\\Shop\\Controllers\\AdminController::adminAction"
         }
     }
 }

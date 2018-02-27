@@ -7,7 +7,7 @@ class ContactController extends Controller
     function contactAction()
     {
         $title = 'Контакты';
-        $view_filename = 'contacts_view.php';
+        $view_filename = 'contacts.php';
        
         return $this->generateResponse($view_filename, $this->template,
             [

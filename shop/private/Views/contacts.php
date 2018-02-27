@@ -44,5 +44,4 @@
                     </h1> 
                   </div> 
       </div>
-<? include "down_page.php";?>
-                
+

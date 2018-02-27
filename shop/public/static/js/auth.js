@@ -1,20 +1,20 @@
-jQuery(document).ready(function() {
+jQuery(document).ready(function(){
     'use strict';
 
     jQuery('form#auth_form').submit(
-        function(event) {
+        function(event){
             event.preventDefault();
-            let login = jQuery('#login_auth').val();
-            let pwd = jQuery('#pwd_auth').val();
-            if (!login || !pwd) {
+
+            let login = jQuery('#login').val();
+            let pwd = jQuery('#pwd').val();
+
+            if(!login || !pwd){
                 return;
             }
 
             let auth_data = {
                 login: login,
-                pwd: pwd,
-
-
+                pwd: pwd
             };
 
             auth_data = 'auth_data=' + JSON.stringify(auth_data);
@@ -23,24 +23,23 @@ jQuery(document).ready(function() {
                 url: '/personal',
                 type: 'post',
                 data: auth_data,
-                success: function(response) {
-                    console.log("memo", response);
+                success: function(response){
                     switch (response) {
                         case 'pwd is wrong':
-                            document.getElementById('memo').innerHTML = 'Пароль не верный';
+                            document.getElementById('memo').innerHTML = 'Указан не верный пароль';
                             break;
                         case 'user not found':
-                            document.getElementById('memo').innerHTML = 'Такого пользователя не существует';
+                            document.getElementById('memo').innerHTML = 'Пользователь не зарегистрирован';
                             break;
                         case 'user':
-                            window.location = "/user.php";
+                            window.location = "/user_account";
                             break;
                         case 'admin':
-                            window.location = "/admin.php";
+                            window.location = "/personal/admin_account";
                             break;
                     }
                 },
-                error: function(err) {
+                error: function(err){
                     console.log("Error", err);
                 }
             });

@@ -13,7 +13,7 @@
                                             <label><b>Логин</b></label>
                                         </td>
                                         <td>
-                                            <input id="login_auth" type="Login" placeholder="введите логин или почту" minlength="8" maxlength="20" autofocus required><br>
+                                            <input id="login" type="login" placeholder="введите логин" minlength="8" maxlength="20" autofocus required><br>
                                         </td>
                                     </tr>
                                     <br>
@@ -22,9 +22,10 @@
                                             <label><b>Пароль</b></label>
                                         </td>
                                         <td>
-                                            <input id="pwd_auth" type="pwd" placeholder="введите пароль" minlength="8" maxlength="16" required>
+                                            <input id="pwd" type="password" placeholder="введите пароль" minlength="8" maxlength="16" required>
                                         </td>
                                     </tr>
+
                                     <div id="response">Введите данные</div>
                                 </table>
                                 <br>
@@ -39,4 +40,3 @@
                         </fieldset>
                     </div>
                 </form>    
-<? include "down_page.php";?>

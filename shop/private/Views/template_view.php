@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -22,10 +23,11 @@
                 <li><a href="personal">Личный кабинет</a></li>
               </ul>
             </div>
-            <?php require_once $view; ?>
+            <? require_once $view; ?>
             
-            <script src="/static/js/check_pole.js"></script>
+            <script src="/static/js/checkInput.js"></script>
             <script src="/static/js/auth.js"></script>
             <script src="/static/js/index.js"></script>
+            <script src="/static/js/registration.js"></script>
 </body>
 </html>  

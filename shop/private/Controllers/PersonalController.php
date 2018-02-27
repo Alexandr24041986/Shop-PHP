@@ -7,7 +7,7 @@ class PersonalController extends Controller
     function personalAction()
     {
         $title = 'Личный кабинет';
-        $view_filename = 'personal_view.php';
+        $view_filename = 'personal.php';
        
         return $this->generateResponse($view_filename, $this->template,
             [
@@ -15,3 +15,4 @@ class PersonalController extends Controller
             ]);
     }
 }
+?>

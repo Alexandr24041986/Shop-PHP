@@ -6,17 +6,16 @@ jQuery(document).ready(function() {
         function(event) {
 
             event.preventDefault();
-            let name = jQuery('#name').val();
-            let login = jQuery('#login').val();
-            let email = jQuery('#email').val();
-            let pwd = jQuery('#pwd').val();
+            let login = checkInput(jQuery('#login').val());
+            let email = checkInput(jQuery('#email').val());
+            let pwd = checkInput(jQuery('#pwd').val());
             console.log('данные ушли');
             if (!name || !login || !pwd || email) {
                 return;
             }
 
             let user_data = {
-                name: name,
+                user_name: user_name,
                 login: login,
                 email: email,
                 pwd: pwd,
@@ -34,17 +33,15 @@ jQuery(document).ready(function() {
                 success: function(response) {
                     console.log("memo", response);
                     switch (response) {
-                        case 'pwd is wrong':
-                            document.getElementById('memo').innerHTML = 'pwd is wrong';
+                        case 'user yes':
+                            document.getElementById('memo').innerHTML = 'login already exists';
                             break;
-                        case 'user not found':
+                        case 'not add':
                             document.getElementById('memo').innerHTML = 'user not found';
                             break;
-                        case 'user':
-                            window.location = "/user.php";
-                            break;
-                        case 'admin':
-                            window.location = "/admin.php";
+                        case 'user add':
+                            document.getElementById('memo').innerHTML = 'Пользователь зарегистрирован';
+                            window.location = "/user_account";
                             break;
                     }
                 },

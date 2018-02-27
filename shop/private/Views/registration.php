@@ -12,7 +12,7 @@
 																<label for="name">Имя</label>
 															</td>
 															<td>
-																<input id="name" type="text" placeholder="введи имя" name="login" autofocus required>
+																<input id="user_name" type="text" placeholder="введи имя"  autofocus required>
 															</td>
 														</tr>
 														<tr>
@@ -20,12 +20,12 @@
 																<label for="login">Логин</label>
 															</td>
 															<td>
-																<input id="login" type="text" placeholder="введи логин" name="login" autofocus required>
+																<input id="login" type="text" placeholder="введи логин" autofocus required>
 															</td>
 														</tr>
 														<tr>
 															<td>
-																<label for="email">E-mail</label>	
+																<label for="email">E-mail</label>
 															</td>
 															<td>
 																<input id="email" type="email" placeholder="введи email" required>
@@ -41,9 +41,9 @@
 														</tr>
 													</table>
 													<div id="memo">Введите данные</div>
-													<div class="submit">                    
+													<div class="submit">
 														<input type="submit" value="Отправить">
-														<input type="reset" value="Отмена">                     
+														<input type="reset" value="Отмена">
 													</div>
 											</fieldset>
 										</div>
@@ -51,5 +51,4 @@
 								</div>
 							</div>
 						</div>				
-			<? include "down_page.php";?>
-							
+

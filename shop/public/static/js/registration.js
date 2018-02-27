@@ -1,24 +1,25 @@
-jQuery(document).ready(function() {
+jQuery(document).ready(function () {
     'use strict';
-
     jQuery('form#registr').submit(
-        function(event) {
+        function (event) {
             event.preventDefault(); // отменяет отправку формы
 
             // получаем значения из input'ов
-            let name = jQuery('#name').val();
+            let user_name =jQuery('#user_name').val();
             let login = jQuery('#login').val();
             let email = jQuery('#email').val();
             let pwd = jQuery('#pwd').val();
+
 
             //TODO: сделать проверку введенных данных
 
             // формируем ассоциативный массив
             let user_data = {
-                name: name,
+
+                user_name: user_name,
                 login: login,
                 email: email,
-                pwd: pwd
+                pwd: pwd,
 
             };
 
@@ -27,15 +28,15 @@ jQuery(document).ready(function() {
 
             // ajax запрос
             jQuery.ajax({
-                url: '/regUser', // обработчик данных на сервере
+                url: '/registration', // обработчик данных на сервере
                 type: 'post', // метод, которым отправляем данные
                 data: user_data, // отправляемые данные (строка json)
-                success: function(response) { // функция, которая будет обрабатывать ответ сервера
+                success: function (response) {  // функция, которая будет обрабатывать ответ сервера
                     console.log("response", response);
                     if (response === 'user add') {
                         // window.location = "/";
                         jQuery("#regModal").modal('hide');
-                        setTimeout(function() {
+                        setTimeout(function () {
                             jQuery("#authModal").modal('show');
                         }, 400);
                     } else {
@@ -43,7 +44,7 @@ jQuery(document).ready(function() {
                     }
                 },
                 // функция, которая отработае, если не получится соедениться с сервером
-                error: function(err) {
+                error: function (err) {
                     console.log("Error", err);
                 }
             });
